@@ -1,0 +1,27 @@
+{
+  "name": "xirelogy/magpie-project",
+  "description": "PHP-Magpie project template",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "JingXiang Tou",
+      "email": "jx@tou.st"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "xirelogy/magpie-core": "^0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/App"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Magpie\\System\\HardCore\\ComposerScriptEventHandler::onPostAutoloadDump",
+      "@php mp sys:refresh-packages"
+    ]
+  }
+}

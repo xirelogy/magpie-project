@@ -1,0 +1,15 @@
+# Project standard
+.env
+.env.backup
+
+# Scarfolding
+/vendor
+composer.lock
+package-lock.json
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# IDE files
+.idea
