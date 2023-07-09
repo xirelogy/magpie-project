@@ -11,9 +11,9 @@ use Magpie\System\Kernel\BootContext;
 use Magpie\System\Kernel\BootRegistrar;
 
 /**
- * Application directories
+ * Application registrar: registers everything for the application
  */
-class AppDirectories implements SystemBootable
+class AppRegistrar implements SystemBootable
 {
     use StaticCreatable;
 

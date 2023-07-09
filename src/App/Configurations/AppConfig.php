@@ -28,7 +28,7 @@ class AppConfig extends MagpieAppConfig
     {
         yield from parent::getBootRegistrableClasses();
 
-        yield AppDirectories::class;
+        yield AppRegistrar::class;
     }
 
 
