@@ -4,7 +4,7 @@ namespace App\Configurations;
 
 use Magpie\Configurations\AppConfig as MagpieAppConfig;
 use Magpie\Facades\Mime\Resolvers\ApacheOrgMimeResolver;
-use Magpie\Queues\Providers\Generators\RandomIdentityProvider;
+use Magpie\Queues\Providers\Generators\RandomQueueIdentityProvider;
 use Magpie\System\Kernel\Kernel;
 
 /**
@@ -39,7 +39,7 @@ class AppConfig extends MagpieAppConfig
     {
         parent::onInitialize($kernel);
 
-        (new RandomIdentityProvider())->registerAsDefaultProvider();
+        (new RandomQueueIdentityProvider())->registerAsDefaultProvider();
 
         ApacheOrgMimeResolver::instance()->registerAsDefaultProvider();
     }
